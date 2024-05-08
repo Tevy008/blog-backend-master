@@ -32,7 +32,7 @@
           {% if post.image.url %}
           <img class="img-fluid" src="{{ post.image.url }}" alt="Картинка блога" />
           {% else %}
-          <img class="img-fluid" src="static/img/banner/blog.png" alt="Картинка блога" />
+          <img class="img-fluid" src="{% static 'static/img/banner/blog.png' %}" alt="Картинка блога" />
           {% endif %}
           <h4>{{ post.title }}</h4>
           <div class="user_details">
@@ -47,10 +47,9 @@
           </div>
           <p>{{ post.text }}</p>
           <div class="news_d_footer flex-column flex-sm-row">
-            <a href="#"><span class="align-middle mr-2"><i class="ti-heart" style="color:red;"></i></span>{{
-              post.likes_amount }} people like this</a>
+            <a href="#"><span class="align-middle mr-2"><i class="ti-heart" style="color:red;"></i></span>{{ post.likes_amount }} people like this</a>
             <a class="justify-content-sm-center ml-sm-auto mt-sm-0 mt-2" href="#"><span class="align-middle mr-2"><i
-                  class="ti-themify-favicon"></i>{{ post.comments|length }} comments</span></a>
+              class="ti-themify-favicon"></i>{{ post.comments|length }} comments</span></a>
             <div class="news_socail ml-sm-auto mt-sm-0 mt-2">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
