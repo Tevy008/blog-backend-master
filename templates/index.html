@@ -55,7 +55,7 @@
                   {% if post.image_url %}
                     <img class="img-fluid" src= {{post.image_url}} alt="Фотография поста">
                   {% else %}
-                  <img class="img-fluid" src="{% static 'static/img/banner/blog.png' %}" alt="Фотография поста">
+                    <img class="img-fluid" src="{% static 'static/img/banner/blog.png' %}" alt="Фотография поста">
                   {% endif %}
                   <ul class="thumb-info" style="max-width:550px;">
                     <li><a href="#"><i class="ti-user"></i>{{ post.author }}</a></li>
